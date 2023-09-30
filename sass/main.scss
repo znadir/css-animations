@@ -1,0 +1,25 @@
+:root {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.9rem;
+}
+
+// Button grandissant
+$cd-btn: #011c37;
+$cd-txt: #15dea5;
+.btn {
+	border: none;
+	background: $cd-btn;
+	color: $cd-txt;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 10rem;
+	transform: scale(1);
+	transition: transform 200ms;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}

@@ -1,0 +1,21 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.9rem;
+}
+
+.btn {
+  border: none;
+  background: #011c37;
+  color: #15dea5;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10rem;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
