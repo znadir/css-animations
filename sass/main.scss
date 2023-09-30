@@ -4,6 +4,11 @@
 
 body {
 	font-size: 1.9rem;
+	background-color: rgb(237, 246, 247);
+}
+
+body > * {
+	margin-bottom: 20px;
 }
 
 // Button grandissant
@@ -22,4 +27,53 @@ $cd-txt: #15dea5;
 	&:hover {
 		transform: scale(1.1);
 	}
+}
+
+// formulaire avec validation
+$cd-txt: #6300a0;
+$cd-box: #fff;
+$cd-txt--invalid: #fff;
+$cd-danger: #b20a37;
+
+.form {
+	&__group {
+		& input {
+			border: 2px solid $cd-box;
+			border-radius: 100rem;
+			color: $cd-txt;
+			font-family: "Montserrat", sans-serif;
+			outline: none;
+			padding: 0.5rem 1.5rem;
+			width: 100%;
+			transition: background-color 200ms;
+
+			&:focus {
+				border: 2px solid $cd-txt;
+			}
+			&:not(:focus):invalid {
+				background: $cd-danger;
+				border: 2px solid $cd-danger;
+				color: $cd-txt--invalid;
+			}
+		}
+	}
+}
+
+// gonfler le ballon
+.btn-ballon {
+	@extend .btn;
+	&:active + .ball {
+		transform: scale(1);
+	}
+}
+
+$ball-size: 100px;
+
+.ball {
+	width: $ball-size;
+	height: $ball-size;
+	background: $cd-btn;
+	border-radius: $ball-size * 0.5;
+	transform: scale(0.1);
+	transition: transform 4000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
