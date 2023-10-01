@@ -12,20 +12,24 @@ body > * {
 }
 
 // Button grandissant
-$cd-btn: #011c37;
+$cd-btn-start: rgba(1, 28, 55, 0);
+$cd-btn-end: rgba(1, 28, 55, 1);
+
 $cd-txt: #15dea5;
 .btn {
-	border: none;
-	background: $cd-btn;
-	color: $cd-txt;
+	border: solid 3px $cd-btn-end;
+	background: $cd-btn-start;
+	color: $cd-btn-end;
 	cursor: pointer;
 	padding: 10px;
 	border-radius: 10rem;
 	transform: scale(1);
-	transition: transform 200ms;
+	transition: transform 150ms, background 100ms 50ms;
 
 	&:hover {
 		transform: scale(1.1);
+		background: $cd-btn-end;
+		color: $cd-txt;
 	}
 }
 
@@ -72,7 +76,7 @@ $ball-size: 100px;
 .ball {
 	width: $ball-size;
 	height: $ball-size;
-	background: $cd-btn;
+	background: rgba(1, 28, 55);
 	border-radius: $ball-size * 0.5;
 	transform: scale(0.1);
 	transition: transform 4000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
